@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="faq-container">
+        <h1 class="faq-heading">Frequently Asked Questions</h1>
+        <div class="accordion">
+            <div class="accordion-item">
+                <input type="checkbox" id="faq1" class="accordion-checkbox">
+                <label class="accordion-header" for="faq1">What is Frontend Mentor and how will it help me?</label>
+                <div class="accordion-content">
+                    <p>Frontend Mentor is a platform that provides real-world front-end challenges to help you improve your coding skills. It allows you to practice building projects using HTML, CSS, and JavaScript with guidance from the community and feedback from other developers.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <input type="checkbox" id="faq2" class="accordion-checkbox">
+                <label class="accordion-header" for="faq2">Is Frontend Mentor free?</label>
+                <div class="accordion-content">
+                    <p>Yes, Frontend Mentor offers many free challenges. However, some advanced projects and features, such as mentorship, are available through a paid plan.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <input type="checkbox" id="faq3" class="accordion-checkbox">
+                <label class="accordion-header" for="faq3">Can I use Frontend Mentor projects in my portfolio?</label>
+                <div class="accordion-content">
+                    <p>Yes, you can use any of the challenges you complete on Frontend Mentor in your portfolio to showcase your skills to potential employers or clients. Just make sure to give proper credit to the original challenge.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <input type="checkbox" id="faq4" class="accordion-checkbox">
+                <label class="accordion-header" for="faq4">How can I get help if I'm stuck on a challenge?</label>
+                <div class="accordion-content">
+                    <p>If you're stuck, you can ask for help in the Frontend Mentor community forums, where other developers can offer advice and guidance. You can also search for tutorials and resources online or seek help from mentors if you have a paid subscription.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <input type="checkbox" id="faq5" class="accordion-checkbox">
+                <label class="accordion-header" for="faq5">Do I need a premium account to submit my solutions?</label>
+                <div class="accordion-content">
+                    <p>No, you can submit your solutions for free. A premium account provides additional features such as access to exclusive challenges and mentorship services, but submission is available to all users.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <input type="checkbox" id="faq6" class="accordion-checkbox">
+                <label class="accordion-header" for="faq6">How long do I have to complete a challenge?</label>
+                <div class="accordion-content">
+                    <p>There is no time limit to complete a challenge. You can work at your own pace. However, it's recommended to set personal deadlines to keep improving your skills and stay motivated.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.accordion-checkbox');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                checkboxes.forEach(item => {
+                    if (item !== this) {
+                        item.checked = false;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
